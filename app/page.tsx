@@ -171,9 +171,8 @@ export default function DashboardPage() {
 
         {overview ? (
           <>
-            <section className="mt-6 grid gap-3 md:grid-cols-3">
+            <section className="mt-6 grid gap-3 md:grid-cols-2">
               <SummaryCard label="Average monthly ROI" value={percent.format(overview.averageMonthlyRoi)} />
-              <SummaryCard label="Total net profit" value={currency.format(overview.netProfit)} />
               <SummaryCard label="Active vehicles" value={String(activeVehicleCount)} />
             </section>
 

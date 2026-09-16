@@ -1,0 +1,9 @@
+node_modules
+.pnpm-store
+.next
+.env.local
+dist
+out
+*.log
+work
+.vercel

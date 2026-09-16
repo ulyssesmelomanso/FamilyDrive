@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="92" viewBox="0 0 420 92" role="img" aria-labelledby="title desc">
+  <title id="title">FamilyDrive</title>
+  <desc id="desc">FamilyDrive brand logo</desc>
+  <rect width="420" height="92" fill="none"/>
+  <g transform="translate(6 12)">
+    <path d="M20 44c3.9-13.7 13.8-24 31-24h37c11.8 0 20.3 6.1 25.7 18.4l4.2 9.6h10.7c7.6 0 13.8 6.2 13.8 13.8v5.6H9.6V60c0-8.8 5.3-14.4 10.4-16Z" fill="#0797a8"/>
+    <path d="M42.5 27.8h44.8c7.5 0 13.1 3.7 17 11.4l3.9 7.7H27.6c3.3-10.9 8.3-17.1 14.9-19.1Z" fill="#83e2df"/>
+    <circle cx="42" cy="67.4" r="11.8" fill="#27556c"/>
+    <circle cx="111" cy="67.4" r="11.8" fill="#27556c"/>
+    <circle cx="42" cy="67.4" r="5" fill="#ffffff"/>
+    <circle cx="111" cy="67.4" r="5" fill="#ffffff"/>
+    <path d="M59.5 17.5 72.6 6.8l13.2 10.7v23.1H59.5V17.5Z" fill="#22c55e"/>
+    <path d="M66.5 40.6V25.8h12.1v14.8" fill="#ffffff" opacity=".92"/>
+  </g>
+  <text x="164" y="45" fill="#27556c" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="0">Family</text>
+  <text x="269" y="45" fill="#0797a8" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="0">Drive</text>
+  <text x="166" y="67" fill="#555555" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1.7">INVESTOR PORTAL</text>
+</svg>

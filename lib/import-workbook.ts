@@ -281,7 +281,7 @@ function statusForMasterVehicle(name: string, vin: string, note = "") {
   const normalized = normalize(`${name} ${vin}`);
   if (normalized.includes("grand cherokee")) return "total_loss";
   if (normalized.includes("cherokee latitude")) return "total_loss";
-  if (normalized.includes("honda odissey") || normalized.includes("honda odyssey")) return "inactive";
+  if (normalized.includes("honda odissey") || normalized.includes("honda odyssey")) return "returned";
   if (normalized.includes("compass trailhawk") || normalize(note).includes("returned")) return "returned";
   return "active";
 }
@@ -292,6 +292,7 @@ function totalLossPayoutForVehicle(name: string) {
 
 function noteForMasterVehicle(name: string, status: string, cashReturned: number) {
   if (status === "total_loss") return `Total loss. Investor was paid back ${formatCurrency(cashReturned)}.`;
+  if (status === "returned" && (normalize(name).includes("honda odissey") || normalize(name).includes("honda odyssey"))) return "Returned.";
   if (status === "returned") return `Returned. Investor recovery recorded from the master sheet: ${formatCurrency(cashReturned)}.`;
   if (status === "inactive") return "Inactive. This vehicle has not hit the road, so it is excluded from portfolio totals and return estimates.";
   return "";

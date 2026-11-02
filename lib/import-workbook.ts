@@ -225,7 +225,7 @@ function parseMasterVehicles(rows: unknown[][]): WorkbookVehicle[] {
     const returnedAmount = returnedAmountForVehicle(name, returnedByName);
     const cashReturned =
       status === "total_loss"
-        ? parseMoney(noteText) || 14855.89
+        ? parseMoney(noteText) || totalLossPayoutForVehicle(name)
         : status === "returned"
           ? returnedAmount
           : 0;
@@ -279,10 +279,15 @@ function returnedAmountForVehicle(name: string, returnedByName: Map<string, numb
 
 function statusForMasterVehicle(name: string, vin: string, note = "") {
   const normalized = normalize(`${name} ${vin}`);
+  if (normalized.includes("grand cherokee")) return "total_loss";
   if (normalized.includes("cherokee latitude")) return "total_loss";
   if (normalized.includes("honda odissey") || normalized.includes("honda odyssey")) return "inactive";
   if (normalized.includes("compass trailhawk") || normalize(note).includes("returned")) return "returned";
   return "active";
+}
+
+function totalLossPayoutForVehicle(name: string) {
+  return normalize(name).includes("grand cherokee") ? 13416.45 : 14855.89;
 }
 
 function noteForMasterVehicle(name: string, status: string, cashReturned: number) {
